@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Anggun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Profil</h1>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#datadiri">Data Diri</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#form">Form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="kemeja putih dasi hitam.png" alt="Foto Anggun">
+    </section>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- Tentang -->
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+            <article>
+                <p>
+                    Saya merupakan mahasiswi semester 4 prodi S1 Informatika ITSK RS dr. Soepraoen Malang, saat ini saya
+                    sedang mempelajari dan mengembangkan kemampuan di bidang teknologi, khususnya dalam pembuatan
+                    website dan aplikasi sederhana. Saya juga memiliki ketertarikan pada pemrograman web serta terus
+                    berusaha meningkatkan pengetahuan dan keterampilan melalui proses belajar dan latihan secara
+                    mandiri.
+                </p>
+            </article>
+        </section>
+
+        <!-- GRID Data Diri & Kontak -->
+        <section class="grid">
+
+            <!-- Data Diri -->
+            <div id="datadiri">
+                <h2>Data Diri</h2>
+                <article>
+                    <p><strong>Nama:</strong> Anggun Tri Pratiwi</p>
+                    <p><strong>TTL:</strong> Malang, 11 Maret 2006</p>
+                    <p><strong>Alamat:</strong> Malang, Jawa Timur</p>
+                    <p><strong>Prodi:</strong> S1 Informatika</p>
+                </article>
+            </div>
+
+            <!-- Kontak -->
+            <div id="kontak">
+                <h2>Kontak</h2>
+                <article>
+                    <p>Email: angguntri793@email.com</p>
+                    <p>No HP: 085713176275</p>
+                </article>
+            </div>
+
+        </section>
+
+        <!-- Form -->
+        <section id="form">
+            <h2>Form Pendaftaran</h2>
+
+            <form id="formPendaftaran">
+                <label>Nama:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Masukkan email" required>
+
+                <label>No HP:</label>
+                <input type="tel" id="nohp" pattern="[0-9]+" placeholder="Masukkan No.HP" required>
+
+                <label>Kategori:</label>
+                <select id="kategori" required>
+                    <option value="">-- Pilih --</option>
+                    <option>Pemrograman Web</option>
+                    <option>Jaringan Komputer</option>
+                    <option>Sistem Informasi</option>
+                </select>
+
+                <label>Pesan:</label>
+                <textarea id="pesan" rows="3" placeholder="Tulis pesan"></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+
+            <div id="hasilPendaftaran"></div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Anggun Tri</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
