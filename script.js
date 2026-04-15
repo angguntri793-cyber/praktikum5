@@ -54,3 +54,54 @@ form.addEventListener("submit", function (e) {
     //reset form
     form.reset();
 });
+
+// ==========================================
+// TO DO LIST LOGIC
+// ==========================================
+const taskInput = document.getElementById("taskInput");
+const addTaskBtn = document.getElementById("addTaskBtn");
+const taskList = document.getElementById("taskList");
+
+// Tambahkan tugas baru
+addTaskBtn.addEventListener("click", function() {
+    const taskText = taskInput.value.trim();
+    if (taskText === "") {
+        alert("Tugas tidak boleh kosong!");
+        return;
+    }
+
+    const li = document.createElement("li");
+    
+    // Teks tugas
+    const span = document.createElement("span");
+    span.textContent = taskText;
+    span.className = "task-text";
+    
+    // Toggle status selesai jika teks diklik
+    span.addEventListener("click", function() {
+        li.classList.toggle("completed");
+    });
+    
+    // Tombol hapus
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Hapus";
+    deleteBtn.className = "btn-delete";
+    deleteBtn.addEventListener("click", function() {
+        li.remove();
+    });
+
+    li.appendChild(span);
+    li.appendChild(deleteBtn);
+    
+    taskList.appendChild(li);
+    
+    // Reset input
+    taskInput.value = "";
+});
+
+// Menambahkan tugas dengan menekan tombol Enter
+taskInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        addTaskBtn.click();
+    }
+});

@@ -111,6 +111,57 @@ h2 {
 .btn-sosmed.gh { background: #333; }
 .btn-sosmed.gh:hover { background: #111; }
 
+/* TO DO LIST */
+.todo-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.todo-input-container input {
+    flex: 1;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    background: #f1f5f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.task-list li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+}
+
+.task-text {
+    cursor: pointer;
+    flex: 1;
+}
+
 /* FORM */
 form {
     background: white;
