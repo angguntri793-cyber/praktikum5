@@ -84,6 +84,33 @@ h2 {
     gap: 20px;
 }
 
+/* MEDIA SOSIAL */
+.sosmed-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-sosmed {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.btn-sosmed.ig { background: #E1306C; }
+.btn-sosmed.ig:hover { background: #c12258; }
+
+.btn-sosmed.li { background: #0077b5; }
+.btn-sosmed.li:hover { background: #005a8c; }
+
+.btn-sosmed.gh { background: #333; }
+.btn-sosmed.gh:hover { background: #111; }
+
 /* FORM */
 form {
     background: white;
