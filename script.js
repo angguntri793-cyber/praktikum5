@@ -105,3 +105,20 @@ taskInput.addEventListener("keypress", function(e) {
         addTaskBtn.click();
     }
 });
+
+// ==========================================
+// THEME SWITCHER LOGIC
+// ==========================================
+const themeToggleBtn = document.getElementById("themeToggle");
+
+themeToggleBtn.addEventListener("click", function() {
+    // Toggle class light-theme pada tag body
+    document.body.classList.toggle("light-theme");
+    
+    // Ubah teks tombol sesuai dengan tema yang aktif
+    if (document.body.classList.contains("light-theme")) {
+        themeToggleBtn.textContent = "Tema Gelap";
+    } else {
+        themeToggleBtn.textContent = "Tema Terang";
+    }
+});

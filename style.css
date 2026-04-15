@@ -198,6 +198,57 @@ footer {
     color: white;
 }
 
+/* THEME SWITCHER */
+.btn-theme {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+    background: white;
+    color: #423c39;
+}
+
+/* TEMA TERANG (ALT THEME) */
+body.light-theme {
+    background: linear-gradient(to right, #f1f5f9, #cbd5e1);
+    color: #333;
+}
+
+body.light-theme .navbar {
+    background: #1e293b;
+}
+
+body.light-theme h2 {
+    color: #1e293b;
+}
+
+body.light-theme button {
+    background: #1e293b;
+    color: white;
+}
+
+body.light-theme .btn-theme {
+    border-color: white;
+    color: white;
+}
+
+body.light-theme .btn-theme:hover {
+    background: white;
+    color: #1e293b;
+}
+
+body.light-theme footer {
+    background: #cbd5e1;
+    color: #1e293b;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
