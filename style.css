@@ -198,56 +198,64 @@ footer {
     color: white;
 }
 
-/* THEME SWITCHER */
-.btn-theme {
-    background: transparent;
+/* THEME PICKER */
+.theme-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-label {
     color: white;
-    border: 1px solid white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
-    transition: all 0.3s ease;
+    font-size: 0.9em;
 }
 
-.btn-theme:hover {
-    background: white;
-    color: #423c39;
+.theme-circles {
+    display: flex;
+    gap: 5px;
 }
 
-/* TEMA TERANG (ALT THEME) */
-body.light-theme {
-    background: linear-gradient(to right, #f1f5f9, #cbd5e1);
-    color: #333;
+.theme-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
-body.light-theme .navbar {
-    background: #1e293b;
-}
-
-body.light-theme h2 {
-    color: #1e293b;
-}
-
-body.light-theme button {
-    background: #1e293b;
-    color: white;
-}
-
-body.light-theme .btn-theme {
+.theme-circle:hover {
+    transform: scale(1.1);
     border-color: white;
-    color: white;
 }
 
-body.light-theme .btn-theme:hover {
-    background: white;
-    color: #1e293b;
-}
+/* THEMES */
+/* TEMA TERANG */
+body.light-theme { background: linear-gradient(to right, #f1f5f9, #cbd5e1); color: #333; }
+body.light-theme .navbar { background: #1e293b; }
+body.light-theme h2 { color: #1e293b; }
+body.light-theme button { background: #1e293b; color: white; }
+body.light-theme footer { background: #cbd5e1; color: #1e293b; }
 
-body.light-theme footer {
-    background: #cbd5e1;
-    color: #1e293b;
-}
+/* TEMA SAMUDRA (OCEAN) */
+body.ocean-theme { background: linear-gradient(to right, #2b5876, #4e4376); }
+body.ocean-theme .navbar { background: #1a3648; }
+body.ocean-theme button { background: #1a3648; }
+body.ocean-theme footer { background: #4e4376; }
+
+/* TEMA HUTAN (FOREST) */
+body.forest-theme { background: linear-gradient(to right, #11998e, #38ef7d); }
+body.forest-theme .navbar { background: #0c736a; }
+body.forest-theme button { background: #0c736a; }
+body.forest-theme footer { background: #11998e; }
+
+/* TEMA SENJA (FIERY) */
+body.fiery-theme { background: linear-gradient(to right, #ff512f, #dd2476); }
+body.fiery-theme .navbar { background: #b1165a; }
+body.fiery-theme button { background: #b1165a; }
+body.fiery-theme footer { background: #dd2476; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

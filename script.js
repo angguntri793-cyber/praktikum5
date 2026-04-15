@@ -107,18 +107,21 @@ taskInput.addEventListener("keypress", function(e) {
 });
 
 // ==========================================
-// THEME SWITCHER LOGIC
+// THEME SWITCHER LOGIC (MULTI THEME)
 // ==========================================
-const themeToggleBtn = document.getElementById("themeToggle");
+const themeButtons = document.querySelectorAll(".theme-circle");
 
-themeToggleBtn.addEventListener("click", function() {
-    // Toggle class light-theme pada tag body
-    document.body.classList.toggle("light-theme");
-    
-    // Ubah teks tombol sesuai dengan tema yang aktif
-    if (document.body.classList.contains("light-theme")) {
-        themeToggleBtn.textContent = "Tema Gelap";
-    } else {
-        themeToggleBtn.textContent = "Tema Terang";
-    }
+themeButtons.forEach(btn => {
+    btn.addEventListener("click", function() {
+        // Hapus semua tema yang sudah dipasang
+        document.body.classList.remove("light-theme", "ocean-theme", "forest-theme", "fiery-theme");
+        
+        // Ambil nama tema dari atribut data-theme
+        const selectedTheme = btn.getAttribute("data-theme");
+        
+        // Tambahkan tema baru jika bukan tema default (original)
+        if (selectedTheme !== "default-theme") {
+            document.body.classList.add(selectedTheme);
+        }
+    });
 });
